@@ -16,9 +16,6 @@ public class EmailApp {
         s = in.nextLine();
         emailrecord.setLastname(s);
 
-        System.out.println("Set password: ");
-        s = in.nextLine();
-        emailrecord.setPassword(s);
         boolean flag = false;
         while (flag == false){
         System.out.println("Set department (0 - Sales,1 - Development,2 - Accounting): ");
@@ -32,5 +29,6 @@ public class EmailApp {
 
         System.out.println("Email will be: " + emailrecord.generateEmail());
         System.out.println("Email capacity will be: " + emailrecord.getCapacity());
+        System.out.println("Password will be: " + emailrecord.generatePassword(8));
     }
 }
